@@ -1,0 +1,14 @@
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/bin/Debug/net8.0/TheFinalBattle
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/bin/Debug/net8.0/TheFinalBattle.deps.json
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/bin/Debug/net8.0/TheFinalBattle.runtimeconfig.json
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/bin/Debug/net8.0/TheFinalBattle.dll
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/bin/Debug/net8.0/TheFinalBattle.pdb
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.AssemblyInfoInputs.cache
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.AssemblyInfo.cs
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.csproj.CoreCompileInputs.cache
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.dll
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/refint/TheFinalBattle.dll
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.pdb
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.genruntimeconfig.cache
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/ref/TheFinalBattle.dll

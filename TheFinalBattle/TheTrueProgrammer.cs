@@ -1,0 +1,1 @@
+public class TheTrueProgrammer(string name, IAttack standardAttack) : Character(name, standardAttack, 25){}
