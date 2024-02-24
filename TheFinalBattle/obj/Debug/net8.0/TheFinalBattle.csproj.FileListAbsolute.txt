@@ -12,3 +12,4 @@
 /Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.pdb
 /Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.genruntimeconfig.cache
 /Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/ref/TheFinalBattle.dll
+/Users/marktallentire/aplayersguide/TheFinalBattle/TheFinalBattle/obj/Debug/net8.0/TheFinalBattle.sourcelink.json

@@ -3,8 +3,6 @@ game.InitialiseGame();
 
 public class Game
 {
-    public readonly List<Battle> BattleSeries = new List<Battle>();
-
     public void InitialiseGame()
     {
         Renderer.WriteLine("What is your name?");
@@ -18,11 +16,14 @@ public class Game
             var heroes = new Party(new List<Character>() { hero }, computerPlayer);
 
             var battleSeries = new BattleSeries();
-            BattleSeries.Add(battleSeries.CreateFirstBattle(heroes, computerPlayer));
-            BattleSeries.Add(battleSeries.CreateSecondBattle(heroes, computerPlayer));
-            BattleSeries.Add(battleSeries.CreateThirdBattle(heroes, computerPlayer));
+            List<Battle> battles = new List<Battle>()
+            {
+                battleSeries.CreateFirstBattle(heroes, computerPlayer),
+                battleSeries.CreateSecondBattle(heroes, computerPlayer),
+                battleSeries.CreateThirdBattle(heroes, computerPlayer),
+            };
 
-            foreach (var battle in BattleSeries)
+            foreach (var battle in battles)
             {
                 var winningParty = battle.RunBattle();
 
@@ -30,7 +31,7 @@ public class Game
                     Renderer.WriteLine(
                         "The monsters have won and the Uncoded One is now free to reign terror across all of Consolas");
 
-                if (BattleSeries[^1] != battle)
+                if (battles[^1] != battle)
                     Console.WriteLine("The heroes win and move on to the next battle");
             }
 
