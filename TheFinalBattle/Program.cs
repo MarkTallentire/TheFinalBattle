@@ -1,4 +1,6 @@
-﻿Game game = new Game();
+﻿using TheFinalBattle.Players;
+
+Game game = new Game();
 game.InitialiseGame();
 
 public class Game
@@ -11,9 +13,10 @@ public class Game
         while (true)
         {
             var computerPlayer = new Computer();
+            var humanPlayer = new Human();
 
             var hero = new TheTrueProgrammer(playerName, new Punch());
-            var heroes = new Party(new List<Character>() { hero }, computerPlayer);
+            var heroes = new Party(new List<Character>() { hero }, humanPlayer);
 
             var battleSeries = new BattleSeries();
             List<Battle> battles = new List<Battle>()

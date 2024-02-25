@@ -13,6 +13,8 @@ public class Battle(Party heroes, Party monsters)
                 {
                     if (IsDefeated(GetOpposingParty(character))) return party;
                     
+                    ShowStatus();
+                    
                     Renderer.WriteLine($"It is {character.Name}'s turn...");
                     party.ControlledBy.ChooseAction(character, GetOpposingParty(character));
                     Renderer.WriteLine("");
@@ -20,6 +22,26 @@ public class Battle(Party heroes, Party monsters)
                 }
             } 
         }
+    }
+
+    private void ShowStatus()
+    {
+        Renderer.FillLine('=', "BATTLE");
+        Renderer.WriteLine("");
+        foreach (var character in heroes.Characters)
+        {
+            Renderer.Write($"{character.Name}", JustifyOptions.Left);
+            Renderer.Write($"({character.Health.ToString()}/{character.MaxHealth.ToString()})           ", JustifyOptions.Center);
+            Renderer.WriteLine("");
+        }
+        Renderer.FillLine('-', "VS");
+        Renderer.WriteLine("");
+        foreach (var character in monsters.Characters)
+        {
+            Renderer.Write($"{character.Name} ({character.Health.ToString()}/{character.MaxHealth.ToString()})", JustifyOptions.Right);
+            Renderer.WriteLine("");
+        }
+        Renderer.FillLine('=');
     }
 
     private bool IsDefeated(Party party)

@@ -7,7 +7,7 @@ public class Character
     public int MaxHealth { get; }
     public int Health { get; private set; }
 
-    public Character(string name, IAttack standardAttack, int maxHealth)
+    protected Character(string name, IAttack standardAttack, int maxHealth)
     {
         Name = name;
         Actions = new List<IAction>() { new DoNothingAction() };
