@@ -22,5 +22,10 @@ public class Character
         if (Health - damage >= 0)
             Health -= damage;
     }
+
+    public void Heal(int amount)
+    {
+        Health += amount;
+    }
     
 }

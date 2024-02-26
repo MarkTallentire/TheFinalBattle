@@ -15,15 +15,16 @@ public class Game
             var computerPlayer = new Computer();
             var humanPlayer = new Human();
 
+            var heroStartingItems = new List<IItem> { new HealthPotion(), new HealthPotion(), new HealthPotion() };
             var hero = new TheTrueProgrammer(playerName, new Punch());
-            var heroes = new Party(new List<Character>() { hero }, humanPlayer);
+            var heroes = new Party(new List<Character>() { hero }, humanPlayer, heroStartingItems);
 
             var battleSeries = new BattleSeries();
             List<Battle> battles = new List<Battle>()
             {
-                battleSeries.CreateFirstBattle(heroes, computerPlayer),
-                battleSeries.CreateSecondBattle(heroes, computerPlayer),
-                battleSeries.CreateThirdBattle(heroes, computerPlayer),
+                battleSeries.CreateFirstBattle(heroes, computerPlayer, [new HealthPotion()]),
+                battleSeries.CreateSecondBattle(heroes, computerPlayer, [new HealthPotion()]),
+                battleSeries.CreateThirdBattle(heroes, computerPlayer, [new HealthPotion()]),
             };
 
             foreach (var battle in battles)
@@ -43,30 +44,29 @@ public class Game
     }
 }
 
-
 public class BattleSeries()
 {
-    public Battle CreateFirstBattle(Party heroes, IPlayer player)
+    public Battle CreateFirstBattle(Party heroes, IPlayer player, List<IItem> monsterStartingInventory)
     {
         var skeleton = new Skeleton(new BoneCrunch());
-        var monsters = new Party(new List<Character>() { skeleton }, player);
+        var monsters = new Party(new List<Character>() { skeleton }, player, monsterStartingInventory);
 
         return new Battle(heroes, monsters);
     }
 
-    public Battle CreateSecondBattle(Party heroes, IPlayer player)
+    public Battle CreateSecondBattle(Party heroes, IPlayer player, List<IItem> monsterStartingInventory)
     {
         var skeleton = new Skeleton(new BoneCrunch());
         var skeletonTwo = new Skeleton(new BoneCrunch());
-        var monsters = new Party(new List<Character>() { skeleton, skeletonTwo }, player);
+        var monsters = new Party(new List<Character>() { skeleton, skeletonTwo }, player, monsterStartingInventory);
 
         return new Battle(heroes, monsters);
     }
 
-    public Battle CreateThirdBattle(Party heroes, IPlayer player)
+    public Battle CreateThirdBattle(Party heroes, IPlayer player,  List<IItem> monsterStartingInventory)
     {
         var uncodedOne = new UncodedOne(new Unravel());
-        var monsters = new Party(new List<Character>() { uncodedOne }, player);
+        var monsters = new Party(new List<Character>() { uncodedOne }, player, monsterStartingInventory);
 
         return new Battle(heroes, monsters);
     }

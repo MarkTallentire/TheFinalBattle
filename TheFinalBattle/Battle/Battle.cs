@@ -16,7 +16,7 @@ public class Battle(Party heroes, Party monsters)
                     ShowStatus();
                     
                     Renderer.WriteLine($"It is {character.Name}'s turn...");
-                    party.ControlledBy.ChooseAction(character, GetOpposingParty(character));
+                    party.ControlledBy.ChooseAction(character, GetOpposingParty(character), party);
                     Renderer.WriteLine("");
                     CheckForDeadCharacters();
                 }
